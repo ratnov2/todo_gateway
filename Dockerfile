@@ -9,6 +9,7 @@ RUN rm /etc/nginx/conf.d/default.conf
 # Устанавливаем bash и envsubst (часть gettext)
 RUN apk add --no-cache bash gettext
 
+
 # Копируем шаблон конфигурации и entrypoint-скрипт
 COPY nginx.conf.template /etc/nginx/templates/nginx.conf.template
 COPY docker-entrypoint.sh /docker-entrypoint.sh

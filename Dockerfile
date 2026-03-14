@@ -16,9 +16,6 @@ COPY docker-entrypoint.sh /docker-entrypoint.sh
 # Делаем скрипт исполняемым
 RUN chmod +x /docker-entrypoint.sh
 
-# Копируем HTML-файлы для портов 81, 82, 83
-COPY html /usr/share/nginx/html/
-
 # Устанавливаем entrypoint
 ENTRYPOINT ["/docker-entrypoint.sh"]
 

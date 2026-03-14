@@ -14,4 +14,4 @@ jobs:
           -H "Accept: application/vnd.github+json" \
           -H "Authorization: Bearer ${{ secrets.GIT_TOKEN }}" \
           https://api.github.com/repos/ratnov2/todo_general/dispatches \
-          -d '{"event_type":"backend_updated"}'
+          -d '{"event_type":"gateway_updated"}'

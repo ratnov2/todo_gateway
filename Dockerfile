@@ -9,6 +9,8 @@ RUN rm /etc/nginx/conf.d/default.conf
 # Устанавливаем bash и envsubst (часть gettext)
 RUN apk add --no-cache bash gettext
 
+ARG DOMAIN
+ENV DOMAIN=$DOMAIN
 
 # Копируем шаблон конфигурации и entrypoint-скрипт
 COPY nginx.conf.template /etc/nginx/templates/nginx.conf.template
